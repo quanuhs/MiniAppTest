@@ -11,7 +11,7 @@ export default defineConfig({
   base: "/testTG/",
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./testTG/src', import.meta.url))
     }
   }
 })
