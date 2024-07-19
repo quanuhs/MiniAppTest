@@ -9,9 +9,9 @@ export default defineConfig({
     vue(),
   ],
   base: "/testTG/",
-  // resolve: {
-  //   alias: {
-  //     '@': fileURLToPath(new URL('./testTG/src', import.meta.url))
-  //   }
-  // }
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  }
 })
