@@ -1,27 +1,12 @@
 <template>
   <section class="card-section">
     <div class="container">
-      <div class="cards-wrapper">
-        <Card
-          :imageSrc="zhepaImg"
-          title="Готовы ли вы к новому?"
-          questionCount="21 вопрос"
-        />
-        <Card
-          :imageSrc="heartImg"
-          title="Ваша совместимость"
-          questionCount="15 вопросов"
-        />
-        <Card
-          :imageSrc="zhepaImg"
-          title="Расскажите, о чём мечтаете"
-          questionCount="13 вопросов"
-        />
-        <Card
-          :imageSrc="heartImg"
-          title="Поделитесь сокровенным"
-          questionCount="25 вопросов"
-        />
+      <div :class="gridClass">
+        <Card v-for="card in cards" 
+          :imageSrc="card.imageSrc"
+          :title="card.title"
+          :questionCount="card.questionCount">
+        </Card>
       </div>
     </div>
   </section>
@@ -31,6 +16,22 @@
 import zhepaImg from '@/assets/img/zhepa.svg'
 import heartImg from '@/assets/img/heart.svg'
 import Card from './Card.vue'
+import { computed } from 'vue'
+
+const cards = [
+  { imageSrc: zhepaImg, title: 'Готовы ли вы к новому?', questionCount: '21 вопрос' },
+  { imageSrc: heartImg, title: 'Ваша совместимость', questionCount: '15 вопросов' },
+  { imageSrc: zhepaImg, title: 'Расскажите, о чём мечтаете', questionCount: '13 вопросов' },
+  { imageSrc: heartImg, title: 'Поделитесь сокровенным', questionCount: '25 вопросов' }
+]
+
+const gridClass = computed(() => {
+  return {
+    'cards-wrapper': true,
+    even: cards.length % 2 === 0,
+    odd: cards.length % 2 !== 0
+  }
+})
 </script>
 
 <style scoped>
@@ -51,5 +52,4 @@ import Card from './Card.vue'
 .cards-wrapper.odd {
   grid-template-columns: repeat(3, 1fr);
 }
-
 </style>
