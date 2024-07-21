@@ -1,5 +1,5 @@
 <template>
-  <section class="card-section">
+  <section>
     <div class="container">
       <div :class="gridClass">
         <Card v-for="card in cards" 
@@ -35,9 +35,6 @@ const gridClass = computed(() => {
 </script>
 
 <style scoped>
-.card-section {
-  margin: 20px;
-}
 
 .cards-wrapper {
   display: grid;

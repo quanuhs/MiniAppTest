@@ -64,12 +64,12 @@
     display: flex;
     flex-direction: column;
     justify-self: stretch;
-    gap: 8px;
   }
   
   .checkbox__name {
     display: flex;
     padding: 15px 20px;
+    height: 60px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -89,6 +89,7 @@
     display: flex;
     align-items: center;
     width: 100%;
+    
   }
   
   .checkbox__input+label::after {
@@ -110,8 +111,8 @@
   }
   
   .checkbox__input:checked+label {
-    outline: 2px solid var(--accent-color);
-    outline-offset: -2px;
+    outline: 4px solid var(--accent-color);
+    outline-offset: -10px;
   }
   
   .answer__buttons {
@@ -121,6 +122,7 @@
   }
   
   .answer__submit {
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;

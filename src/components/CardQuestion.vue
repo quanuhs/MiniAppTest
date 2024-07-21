@@ -1,8 +1,9 @@
 <template>
-    <section class="card-question">
+    <section>
       <div class="container">
         <div class="question-container">
-          <ProgressBar :progressWidth="progressWidth" :remainingQuestions="remainingQuestions" />
+          <ProgressBar :progress="progress"/>
+          <label>Осталось: {{ remainingQuestions }}</label>
           <QuestionForm :questionTitle="questionTitle" :answers="answers" />
         </div>
       </div>
@@ -13,7 +14,7 @@
   import ProgressBar from './ProgressBar.vue'
   import QuestionForm from './QuestionForm.vue'
   
-  const progressWidth = '67%' // Пример значения, измените по необходимости
+  const progress = 50 // Пример значения, измените по необходимости
   const remainingQuestions = 19
   const questionTitle = 'Какой вид экспериментов вас привлекает?'
   const answers = [
@@ -26,12 +27,7 @@
   </script>
   
   <style scoped>
-  .card-question {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-  }
-  
+
   .question-container {
     display: flex;
     flex-direction: column;

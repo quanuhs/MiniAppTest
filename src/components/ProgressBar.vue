@@ -1,53 +1,38 @@
 <template>
-    <div class="progress-count">
-      <div class="progress-bar-question">
-        <div class="progress-bar-question-inner" :style="{ width: progressWidth }"></div>
-      </div>
-      <p class="progress-count__text">Ещё {{ remainingQuestions }} вопросов</p>
+    <div class="progress-bar">
+      <div class="progress-bar-inner" :style="{ width: progress+'%' }"></div>
     </div>
   </template>
+
+  
   
   <script setup>
-  import { defineProps } from 'vue'
+  import { defineProps, computed } from 'vue'
+
   
   const props = defineProps({
-    progressWidth: String,
-    remainingQuestions: Number
+    progress: Number
   })
+
   </script>
   
   <style scoped>
-  .progress-count {
-    width: 162px;
-    display: flex;
-    padding: 12px 25px;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    background: var(--white);
-  }
   
-  .progress-bar-question {
+  .progress-bar {
     width: 100%;
     height: 6px;
     position: relative;
     border-radius: 20px;
-    background: var(--gray-50);
+    background: var(--gray-100);
   }
-  
-  .progress-bar-question-inner {
+
+  .progress-bar-inner {
     height: 100%;
-    width: 67%; /* Эта ширина будет динамически изменяться */
+    width: 0%; /* Эта ширина будет динамически изменяться */
     position: absolute;
     border-radius: 20px;
-    background: var(--light-accent-color);
+    background: var(--accent-color);
   }
-  
-  .progress-count__text {
-    font-size: 12px;
-    text-align: center;
-    color: var(--gray-300);
-  }
+
   </style>
   

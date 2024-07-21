@@ -4,9 +4,7 @@
     <div class="card-info-wrapper">
       <h3 class="card-title">{{ title }}</h3>
       <div class="progress">
-        <div class="progress-bar">
-          <div class="progress-bar-inner"></div>
-        </div>
+        <ProgressBar :progress="10"></ProgressBar>>
         <p class="count">{{ questionCount }}</p>
       </div>
     </div>
@@ -14,6 +12,7 @@
 </template>
 
 <script setup>
+import ProgressBar from './ProgressBar.vue'
 import { defineProps } from 'vue'
 
 const props = defineProps({
@@ -66,22 +65,6 @@ const props = defineProps({
   display: flex;
   flex-direction: column;
   gap: 8px;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 6px;
-  position: relative;
-  border-radius: 20px;
-  background: var(--gray-100);
-}
-
-.progress-bar-inner {
-  height: 100%;
-  width: 0%;
-  position: absolute;
-  border-radius: 20px;
-  background: var(--accent-color);
 }
 
 .count {

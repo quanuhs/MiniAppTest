@@ -1,5 +1,5 @@
 <template>
-  <section class="offer-section">
+  <section>
     <div class="container">
       <div class="offer-wrapper">
         <h1 class="offer-title">Пройдите вместе короткие тесты и узнайте друг друга</h1>
@@ -13,9 +13,7 @@
 </script>
 
 <style scoped>
-.offer-section {
-  margin: 20px;
-}
+
 
 .offer-wrapper {
   display: flex;
