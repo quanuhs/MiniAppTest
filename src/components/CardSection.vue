@@ -39,8 +39,17 @@ import Card from './Card.vue'
 }
 
 .cards-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  display: grid;
+  gap: 15px;
+  padding: 15px;
 }
+
+.cards-wrapper.even {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cards-wrapper.odd {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 </style>

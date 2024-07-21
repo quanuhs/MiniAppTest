@@ -37,10 +37,11 @@ const props = defineProps({
   border-radius: 10px;
   background: var(--gray-300);
   transition: background 0.3s ease;
-}
 
-.card:hover {
-  background: var(--gray-100);
+  &:hover{
+    border: 2px solid;
+    border-color: var(--accent-color);
+  }
 }
 
 .card-info-wrapper {
