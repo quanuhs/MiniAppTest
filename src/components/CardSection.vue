@@ -3,22 +3,22 @@
     <div class="container">
       <div class="cards-wrapper">
         <Card
-          imageSrc="@/assets/img/zhepa.svg"
+          :imageSrc="zhepaImg"
           title="Готовы ли вы к новому?"
           questionCount="21 вопрос"
         />
         <Card
-          imageSrc="@/assets/img/heart.svg"
+          :imageSrc="heartImg"
           title="Ваша совместимость"
           questionCount="15 вопросов"
         />
         <Card
-          imageSrc="@/assets/img/zhepa.svg"
+          :imageSrc="zhepaImg"
           title="Расскажите, о чём мечтаете"
           questionCount="13 вопросов"
         />
         <Card
-          imageSrc="@/assets/img/heart.svg"
+          :imageSrc="heartImg"
           title="Поделитесь сокровенным"
           questionCount="25 вопросов"
         />
@@ -28,6 +28,8 @@
 </template>
 
 <script setup>
+import zhepaImg from '@/assets/img/zhepa.svg'
+import heartImg from '@/assets/img/heart.svg'
 import Card from './Card.vue'
 </script>
 
