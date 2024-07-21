@@ -68,15 +68,16 @@
   
   .checkbox__name {
     display: flex;
-    padding: 15px 20px;
+    padding: 0px 20px;
     height: 60px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     align-self: stretch;
     outline: none;
-    border-radius: 10px;
+    border-radius: 20px;
     background: var(--gray-200);
+    border: 4px solid var(--gray-300)
   }
   
   .checkbox__input {
@@ -112,7 +113,7 @@
   
   .checkbox__input:checked+label {
     outline: 4px solid var(--accent-color);
-    outline-offset: -10px;
+    outline-offset: -8px;
   }
   
   .answer__buttons {
