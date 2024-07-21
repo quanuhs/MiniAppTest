@@ -42,7 +42,6 @@ const gridClass = computed(() => {
 .cards-wrapper {
   display: grid;
   gap: 15px;
-  padding: 15px;
 }
 
 .cards-wrapper.even {
@@ -52,4 +51,12 @@ const gridClass = computed(() => {
 .cards-wrapper.odd {
   grid-template-columns: repeat(3, 1fr);
 }
+
+
+@media only screen and (max-width: 420px) {
+  .cards-wrapper{
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
 </style>
