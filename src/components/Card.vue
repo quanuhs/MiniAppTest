@@ -39,8 +39,7 @@ const props = defineProps({
   transition: background 0.3s ease;
 
   &:hover{
-    border: 2px solid;
-    border-color: var(--accent-color);
+    background: var(--gray-hover);
   }
 }
 
