@@ -96,8 +96,10 @@
   .checkbox__input+label::after {
     content: '';
     display: inline-block;
+    min-width: 20px;
+    aspect-ratio: 1/1;
     width: 20px;
-    height: 20px;
+    max-width: 20px;
     margin-left: auto;
     background-color: var(--gray-100);
     border-radius: 20px;
